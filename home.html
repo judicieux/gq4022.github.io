@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property='og:description' content='blog articles by gq4022'>
+        <meta property='og:url' content='https://gq4022.github.io/'>
+        <meta property='og:site_name' content='gq4022 blog'>
+        <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2022-02-09T16:15:44&#43;01:00 '/>
+        <meta name="twitter:site" content="@gq4022">
+        <meta name="twitter:creator" content="@gq4022"><meta name="twitter:title" content="gq4022 blog">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial;
+                color: #fff;
+                transition: .2s;
+            }
+            .gq4022 {
+                font-family: cursive;
+                font-weight: bold;
+                float: left;
+                padding: 10px 10px;
+                margin-left: 33%;
+            }
+            .mode {
+                background-color: #333;
+                border: 3px solid gray;
+                position:absolute;
+                bottom:0;
+                left:0;
+                font-weight: bold;
+                float: right;
+                padding: 14px 20px;
+            }
+            .dark {
+                background-color: #222;
+                color: #e6e6e6;
+                transition: .2s;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+                border: 3px solid gray;
+            }
+            .navbar a {
+                padding: 14px 16px;
+                float: left;
+                text-decoration: none;
+                font-size: 15;
+                text-align: center;
+                color: white;
+            }
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+                transition: .4s;
+            }
+            .navbar a.active {
+                background-color: blueviolet;
+                color: white;
+            }
+            .edit {
+                cursor: pointer;
+                border-radius: 50%;
+                position: relative;
+                top: 10px;
+                width: 35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='navbar'>
+            <a class="active" href="index.html">Home</a>
+            <a href="writeups.html">Write-ups</a>
+            <a href="aboutme.html">About me</a>
+            <div class="gq4022">gq4022</div>
+        </div>
+        <div class="mode">
+            Darkmode: 
+            <img class="edit" src="https://i.pinimg.com/474x/cc/16/87/cc16877ce0898733e4e5592118f822d6.jpg"></p>
+        </div>
+        <script>
+            $(".edit").on("click", function() {
+                if($("body").hasClass("dark")) {
+                    $("body").removeClass("dark");
+                    $(".edit").attr("src", "https://i.pinimg.com/474x/cc/16/87/cc16877ce0898733e4e5592118f822d6.jpg");
+                } else {
+                    $("body").addClass("dark");
+                    $(".edit").attr("src", "https://data.whicdn.com/images/328578481/original.jpg");
+                }
+            });
+        </script>
+    </body>
+</html>
